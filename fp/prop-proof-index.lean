@@ -7,15 +7,6 @@ def snail := woodlandCritters[2]
 
 -- def oops := woodlandCritters[3]
 
-def onePlusOneIsTwo : Prop := 1 + 1 = 2
-theorem OnePlusOneIsTwo : onePlusOneIsTwo := rfl
-
-def stringAppend : Prop := "Str".append "ing" = "String"
-theorem StringAppend : stringAppend := rfl
-
--- theorem addAndAppend : onePlusOneIsTwo ∧ stringAppend := by simp
-
--- theorem addAndAppend2 : 1 + 1 = 2 ∧ "Str".append "ing" = "String" := by simp
 
 theorem andImpliesOr : A ∧ B → A ∨ B :=
   fun andEvidence =>
@@ -41,3 +32,7 @@ def wat : (2 + 3 = 5) ∧ (15 - 8 = 7) ∧ ("Hello, ".append "world" = "Hello, w
   And.intro rfl (And.intro rfl rfl)
 
 def wat2 : (2 + 3 = 5) ∧ (15 - 8 = 7) ∧ ("Hello, ".append "world" = "Hello, world") := by simp
+
+def fifth (xs : List α) (ok : xs.length > 5) : α := xs[5]
+
+--
